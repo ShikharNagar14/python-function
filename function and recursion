@@ -1,0 +1,100 @@
+def percent(marks):
+    p=((marks[0]+marks[1]+marks[2]+marks[3])/400)*100
+    return p
+marks1=[45,78,86,77]
+percentage1=percent(marks1)
+marks2=[75,98,88,78]
+percentage2=percent(marks2)
+print(percentage1,percentage2)
+
+
+def greet(name):
+    print("good day,"+name)
+greet("Shikhar")
+
+def mysum(num1,num2):
+    return num1+num2
+greet("Harry")
+s= mysum(6,32)
+print(s)
+
+
+def greet(name="stranger"):
+    print("good day,"+name)
+greet("Shikhar")
+greet()
+
+# recursion
+#n!=(n-1)!*n
+n=4
+product=1
+for i in range(n):
+    product=product*(i+1)
+print(product)
+
+def factorial_iter(n):
+    product=1
+    for i in range(n):
+        product=product*(i*1)
+        return product
+
+def factorial_recursive(n):
+    if n==1 or n==0:
+        return 1
+    return n*factorial_recursive(n-1)
+#f= print(factorial_iter)
+f=factorial_recursive(5)
+print(f)
+
+# practice set
+
+def maximum(num1,num2,num3):
+    if(num1>num2):
+        if (num1>num3):
+            return num1
+        else:
+            return num3
+
+    else:
+        if(num2>num3):
+            return num2
+        else:
+            return num3
+m=maximum(18,5,3)
+print("the value of the maximum is:",str(m))
+  
+ # 2
+
+def farh(cel):
+    return(cel*(9/5)+32)
+c=45
+print("farhenite temorature is:",str(f))   
+
+# 3
+print("hello",end=" ")
+print("how",end=" ")
+print("hell",end=" ")
+print("hiiiii",end=" ")
+
+#4
+'''def sum_naturalnumber(n):
+    if n==1 or n==0:
+        return 1
+    return n+(sum_naturalnumber(n+1))
+s=sum_naturalnumber(5)
+print(s)'''    
+
+# 5
+n=6
+for i in range(n):
+    print("*"*(n-i))
+
+# 7
+def remove_and_split(string,word):
+    newstr= string.replace(word, "")
+    return newstr.strip()
+this="           Shikhar is a good boy         "
+n=remove_and_split(this,"Harry")
+print(n)
+#print(this)
+#print(this.strip())
